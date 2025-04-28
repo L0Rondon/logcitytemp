@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="listarLinhas.css">
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776</label>
+        <nav class="Menu" id="Menu">
+            <ul>
+                <li></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="sobre.html" class="dropbtn">Sobre</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sobre.html">Informações</a></li>
+                        <li><a href="#InfoContat">Info. Contato</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li class="dropdown">
+                    <a href="">Cadastro</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cadastroUsu.html">Usuário</a></li>
+                        <li><a href="cadastroOni.html">Linha/Ônibus</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+        <br>
+        <h1>LogCity</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Lista de Tarefas</h1>
+            <table id="tabelaTarefas">
+                <thead>
+                    <tr>
+                        <th>Nome da Tarefa</th>
+                        <th>Descrição</th>
+                        <th>Data de Entrega</th>
+                        <th>Responsável</th>
+                        <th>Status</th>
+                        <th>Ações</th> <!-- Nova coluna de ações -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- As linhas serão inseridas aqui dinamicamente -->
+                </tbody>
+            </table>
+
+
+            <!-- Formulário para editar a tarefa -->
+            <div id="formularioEdicao" style="display:none;">
+                <h2>Editar Tarefa</h2>
+                <form id="formEditarTarefa">
+                    <input type="hidden" id="tarefaId">
+
+
+                    <label for="editarNome">Nome da Tarefa:</label>
+                    <input type="text" id="editarNome" required>
+
+
+                    <label for="editarDescricao">Descrição:</label>
+                    <textarea id="editarDescricao" required></textarea>
+
+
+                    <label for="editarDataEntrega">Data de Entrega:</label>
+                    <input type="date" id="editarDataEntrega" required>
+
+
+                    <label for="editarResponsavel">Responsável:</label>
+                    <select id="editarResponsavel" required></select>
+                    <!-- Usamos um select para listar os responsáveis -->
+
+
+                    <label for="editarStatus">Status:</label>
+                    <select id="editarStatus">
+                        <option value="incompleta">Incompleta</option>
+                        <option value="completa">Concluída</option>
+                    </select>
+
+
+                    <button type="submit">Salvar Alterações</button>
+                    <button type="button" id="cancelarEdicao">Cancelar</button>
+                </form>
+            </div>
+
+
+        </div>
+    </main>
+    <footer id="InfoContat">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre Nós</h4>
+                <p>Somos uma empresa dedicada a fornecer os produtos que desejar com alta qualidade.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#InfoContat">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: logcity@gmail.com</p>
+                <p>Telefone: (19) 9000-9000</p>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Log City. Todos os direitos reservados.</p>
+            </div>
+        </div>
+        <a href="#Menu" title="Titulo"><img src="assets/img/favicon.ico" alt="iconetopo">
+    </footer>
+
+    <script src="assets/js/listarLinhas.js"></script>
+</body>
+
+</html>
